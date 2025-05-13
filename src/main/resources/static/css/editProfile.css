@@ -1,0 +1,116 @@
+/* Стили для модального окна редактирования профиля */
+#editProfileModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+    padding-top: 100px;
+}
+
+#editProfileModal .modal-content {
+    background-color: #fefefe;
+    margin: 0 auto; /* Убрали процентный отступ */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px; /* Уменьшили максимальную ширину */
+    max-height: calc(100vh - 120px); /* Учитываем padding-top */
+    overflow-y: auto; /* Только вертикальная прокрутка */
+    display: flex;
+    flex-direction: column;
+}
+
+#editProfileModal .modal-header {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+#editProfileModal .modal-title {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+    text-align: center;
+}
+
+#editProfileModal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.3rem;
+    color: #aaa;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+/* Стили для формы редактирования профиля */
+#profileEditForm {
+    overflow-y: auto;
+    padding-right: 5px;
+    flex-grow: 1;
+}
+
+#profileEditForm .form-group {
+    margin-bottom: 15px;
+}
+
+#profileEditForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+#profileEditForm input[type="text"],
+#profileEditForm input[type="email"],
+#profileEditForm input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+#profileEditForm .form-footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#profileEditForm .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+    #editProfileModal {
+        padding-top: 30px;
+    }
+
+    #editProfileModal .modal-content {
+        padding: 15px;
+        width: 95%;
+        max-width: 350px;
+    }
+
+    #profileEditForm input {
+        padding: 8px;
+    }
+}
+

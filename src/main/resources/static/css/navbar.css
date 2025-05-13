@@ -1,0 +1,52 @@
+/* Общие настройки шрифта и цветов */
+.navbar {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Логотип и текст рядом */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    gap: 10px;
+}
+
+/* Стили картинки */
+.logo-img {
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+/* Ссылки в навигации */
+.nav-center {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.nav-center a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-center a:hover {
+    color: #a5d6a7;
+}
